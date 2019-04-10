@@ -36,7 +36,8 @@ public class DAWPanel extends JPanel implements Runnable {
 	double measureSum;
 	double noteLength;
 	double noteY;
-	
+
+	int score;
 	int currentX;
 	int currentWidth;
 	int center;
@@ -156,7 +157,7 @@ public class DAWPanel extends JPanel implements Runnable {
 				
 				if (current.intersects((Rectangle2D) noteOn)) {
 					g2d.setColor(Color.GREEN);
-					System.out.println("intersection");
+					score++;
 				} else if (tracker.getCurrentNotePlayed().toString().equals(notes[i].toString())) {
 					
 					currentX = current.getBounds().x;
@@ -252,6 +253,10 @@ public class DAWPanel extends JPanel implements Runnable {
 				
 				Shape noteOn = new Rectangle2D.Double(i * MEASURE_WIDTH + 20, ROW_HEIGHT * 88 - (((notes[i].getValue()) - 21) * ROW_HEIGHT + 20), noteLength, ROW_HEIGHT / 2);
 				g2d.drawString(UtilityMethods.setPitch(notes[i].getValue()), i * MEASURE_WIDTH + 20, ROW_HEIGHT * 88 - (((notes[i].getValue()) - 21) * ROW_HEIGHT + 20));
+				
+				if (current.intersects((Rectangle2D) noteOn)) {
+					score++;
+				}
 				
 				if (tracker.getCurrentNotePlayed().toString().equals(notes[i].toString())) {
 					g2d.setColor(Color.BLUE);
@@ -357,6 +362,10 @@ public class DAWPanel extends JPanel implements Runnable {
 		if (b == true) {
 			setColor(1);
 		}
+	}
+	
+	public int getScore() {
+		return score;
 	}
 	
 

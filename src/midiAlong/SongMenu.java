@@ -69,7 +69,7 @@ public class SongMenu extends JFrame implements ActionListener {
 	
 	
 	public int getFileNames() {
-		File dir = new File(".");
+		File dir = new File("./Songs/");
 		File [] files = dir.listFiles(new FilenameFilter() {
 			@Override
 			public boolean accept(File dir, String name) {

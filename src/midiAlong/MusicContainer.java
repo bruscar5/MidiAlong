@@ -14,6 +14,9 @@ import javax.swing.border.EmptyBorder;
 
 import javax.swing.JFrame;
 import java.awt.event.AdjustmentListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.awt.event.AdjustmentEvent;
 
 import javax.swing.BorderFactory;
@@ -140,6 +143,16 @@ public class MusicContainer extends JFrame implements ActionListener {
 			if (player != null) {
 				player.stopSequence();
 			}
+			String fileName = "./" + feedback;
+			try {
+				BufferedWriter write = new BufferedWriter(new FileWriter(fileName));
+				write.append(Integer.toString(daw.getScore()));
+				write.close();
+				System.exit(0);
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+			
 		} else if (e.getSource() == rb) {
 			if (rb.isSelected()) {
 				feedback = true;

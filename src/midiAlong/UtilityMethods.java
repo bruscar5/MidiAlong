@@ -220,6 +220,8 @@ public class UtilityMethods {
 	 int vel;
 	 if (a.length() == 5) {
 		 vel = Integer.parseInt(a.substring(1, 3));
+	 } else if (a.length() ==  8) {
+		 vel = Integer.parseInt(a.substring(4, 5));
 	 } else {
 		 vel = Integer.parseInt((a.substring(1, 2)));
 	 }
