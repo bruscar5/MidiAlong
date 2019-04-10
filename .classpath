@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/Brian Healy/eclipse-workspace/midiAlong/jfugue-5.0.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Brian Healy/eclipse-workspace/midiAlong/MusicNote"/>
-	<classpathentry kind="lib" path="C:/Users/Brian Healy/Documents/TarosDSP/TarsosDSP/build/PitchDetector-2.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Brian Healy/Documents/java-speech-api/target/classes"/>
+	<classpathentry kind="lib" path="C:/Users/Brian Healy/eclipse-workspace/midi/TarosDSP/TarsosDSP/build/PitchDetector-2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
