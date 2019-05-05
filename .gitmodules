@@ -1,3 +1,6 @@
 [submodule "TarsosDSP"]
 	path = TarsosDSP
 	url = https://github.com/JorenSix/TarsosDSP
+[submodule "jfugue"]
+	path = jfugue
+	url = https://github.com/dmkoelle/jfugue
